@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+# Aplicação de Gerenciamento de Produtos
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Esta é uma aplicação front-end desenvolvida em ReactJS que permite o gerenciamento de produtos, incluindo operações de CRUD (Create, Read, Update, Delete) e autenticação de usuários. O projeto utiliza Tailwind CSS para estilização e segue boas práticas de UI/UX.
 
-## Available Scripts
+## Funcionalidades
 
-In the project directory, you can run:
+- **Autenticação de Usuário**: Login e cadastro de usuários utilizando CPF/CNPJ, nome, e-mail, senha e número de celular.
+- **CRUD de Produtos**: Criação, leitura, atualização e exclusão de produtos.
+- **Interface Responsiva**: Estilizada com Tailwind CSS para garantir uma boa experiência em diferentes dispositivos.
+- **Validações de Entrada**: Validações para CPF/CNPJ e telefone com máscaras de entrada.
 
-### `npm start`
+## Tecnologias Utilizadas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **ReactJS**: Biblioteca JavaScript para construir interfaces de usuário.
+- **React Router**: Biblioteca para navegação entre páginas no React.
+- **Axios**: Cliente HTTP para realizar requisições à API.
+- **Tailwind CSS**: Framework CSS para estilização rápida e responsiva.
+- **React Text Mask**: Biblioteca para aplicar máscaras de entrada em campos de texto.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Configuração do Projeto
 
-### `npm test`
+### Pré-requisitos
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js instalado na máquina (versão 14 ou superior).
+- NPM (Node Package Manager) ou Yarn.
 
-### `npm run build`
+### Passos para Instalação
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Clone o repositório**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   cd nome-do-repositorio
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Instale as dependências**
 
-### `npm run eject`
+   ```bash
+   npm install
+    ```
+   
+   ou, se estiver usando Yarn:
+      ```bash
+   yarn install
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. **Configuração**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```javascript
+   const config = {
+    apiBaseUrl: 'https://sua-api.com.br/api'
+   };
+   export default config;
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. **Execute a aplicação**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+      ```bash
+   npm start
+   ```
+   ou, se estiver usando Yarn:
+   ```bash
+   npm start
+   ```
+   A aplicação estará disponível em http://localhost:3000.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Estrutura de Pastas
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   ```bash
+   src/
+├── pages/
+│   ├── Login.jsx
+│   ├── NewProduct.jsx
+│   ├── EditProduct.jsx
+│   ├── Products.jsx
+│   └── ... outros componentes
+├── config.js
+├── App.js
+├── index.js
+└── index.css
+   ```
