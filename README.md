@@ -29,8 +29,8 @@ Esta é uma aplicação front-end desenvolvida em ReactJS que permite o gerencia
 1. **Clone o repositório**
 
    ```bash
-   git clone https://github.com/seu-usuario/nome-do-repositorio.git
-   cd nome-do-repositorio
+   git clone https://github.com/nicolasestanislau/product-manager-web-app.git
+   cd product-manager-web-app
    ```
 
 2. **Instale as dependências**
